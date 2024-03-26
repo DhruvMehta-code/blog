@@ -15,10 +15,8 @@ func AnonymousLoginMiddleware() gin.HandlerFunc {
 			return
 		}
 
-		// Set the username in the context for further processing
+		
 		c.Set("username", username)
-
-		// Continue processing the request
 		c.Next()
 	}
 }
